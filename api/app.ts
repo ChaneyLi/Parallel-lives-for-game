@@ -27,9 +27,17 @@ app.use(helmet());
 
 // CORS配置
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-domain.com'] 
-    : ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
+  origin: (origin, callback) => {
+    const devOrigins = ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'];
+    const corsEnv = process.env.CORS_ORIGINS || '';
+    const prodOrigins = corsEnv.split(',').map(s => s.trim()).filter(Boolean);
+    const allowed = process.env.NODE_ENV === 'production' ? prodOrigins : devOrigins;
+    if (!origin || allowed.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 
