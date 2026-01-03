@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { supabaseAdmin } from '../config/supabase'
+import { supabaseAdmin } from '../config/supabase.js'
 
 /**
  * 获取故事的评论列表

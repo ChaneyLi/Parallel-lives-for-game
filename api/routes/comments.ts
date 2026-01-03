@@ -1,6 +1,6 @@
 import express from 'express'
-import { getComments, createComment, deleteComment } from '../controllers/commentController'
-import { authenticateToken } from '../middleware/auth'
+import { getComments, createComment, deleteComment } from '../controllers/commentController.js'
+import { authenticateToken } from '../middleware/auth.js'
 
 const router = express.Router()
 

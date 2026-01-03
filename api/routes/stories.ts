@@ -1,7 +1,7 @@
 import { Router } from 'express'
-import { createStory, getStory, getStories, getUserStories, getLikedStories, toggleStoryVisibility, deleteStory, regenerateStory } from '../controllers/storyController'
-import { authenticateToken, optionalAuth } from '../middleware/auth'
-import { toggleLike } from '../controllers/likeController'
+import { createStory, getStory, getStories, getUserStories, getLikedStories, toggleStoryVisibility, deleteStory, regenerateStory } from '../controllers/storyController.js'
+import { authenticateToken, optionalAuth } from '../middleware/auth.js'
+import { toggleLike } from '../controllers/likeController.js'
 import rateLimit from 'express-rate-limit'
 
 const router = Router()

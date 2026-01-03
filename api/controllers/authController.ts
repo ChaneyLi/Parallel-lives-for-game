@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
-import { supabaseAdmin } from '../config/supabase'
-import { hashPassword, verifyPassword, validatePasswordStrength } from '../utils/password'
-import { generateToken } from '../utils/jwt'
+import { supabaseAdmin } from '../config/supabase.js'
+import { hashPassword, verifyPassword, validatePasswordStrength } from '../utils/password.js'
+import { generateToken } from '../utils/jwt.js'
 
 /**
  * 用户注册

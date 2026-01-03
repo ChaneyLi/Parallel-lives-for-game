@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { verifyToken, extractTokenFromHeader, JWTPayload } from '../utils/jwt'
+import { verifyToken, extractTokenFromHeader, JWTPayload } from '../utils/jwt.js'
 
 // 扩展Request接口以包含用户信息
 declare global {

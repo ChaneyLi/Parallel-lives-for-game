@@ -1,8 +1,8 @@
 import { Request, Response } from 'express'
-import { supabaseAdmin } from '../config/supabase'
-import { generateStory, generateCoverImagePrompt, StoryGenerationRequest, AIServiceError } from '../services/deepseekService'
-import { generateImage, generateImagePromptForChapter, ImageGenerationError } from '../services/imageService'
-import { AuthenticatedRequest } from '../middleware/auth'
+import { supabaseAdmin } from '../config/supabase.js'
+import { generateStory, generateCoverImagePrompt, StoryGenerationRequest, AIServiceError } from '../services/deepseekService.js'
+import { generateImage, generateImagePromptForChapter, ImageGenerationError } from '../services/imageService.js'
+import { AuthenticatedRequest } from '../middleware/auth.js'
 
 /**
  * 生成新故事

@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { register, login, getCurrentUser } from '../controllers/authController'
-import { authenticateToken } from '../middleware/auth'
+import { register, login, getCurrentUser } from '../controllers/authController.js'
+import { authenticateToken } from '../middleware/auth.js'
 import rateLimit from 'express-rate-limit'
 
 const router = Router()
