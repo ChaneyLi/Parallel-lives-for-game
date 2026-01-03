@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "client:dev": "vite",
+    "prebuild": "npm install --include=dev --no-audit --no-fund",
     "build": "vite build",
     "start": "tsx api/server.ts",
     "lint": "eslint .",
