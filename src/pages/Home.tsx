@@ -24,7 +24,7 @@ const Home: React.FC = () => {
   const [popularStories, setPopularStories] = useState<PopularStory[]>([])
   const [loadingStories, setLoadingStories] = useState(false)
   
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002'
+  const API_URL = import.meta.env.VITE_API_URL || window.location.origin
   
   useEffect(() => {
     fetchPopularStories()

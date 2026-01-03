@@ -32,7 +32,7 @@ const Stories: React.FC = () => {
   const [toneFilter, setToneFilter] = useState<ToneFilter>('all')
   const [showFilters, setShowFilters] = useState(false)
   
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002'
+  const API_URL = import.meta.env.VITE_API_URL || window.location.origin
   
   useEffect(() => {
     fetchStories()

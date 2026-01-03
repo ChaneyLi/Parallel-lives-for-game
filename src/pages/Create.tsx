@@ -183,7 +183,7 @@ const Create: React.FC = () => {
     setRetryable(false)
     
     try {
-      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002'
+      const API_URL = import.meta.env.VITE_API_URL || window.location.origin
       
       const response = await fetch(`${API_URL}/api/stories/generate`, {
         method: 'POST',

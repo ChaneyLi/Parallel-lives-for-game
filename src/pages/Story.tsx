@@ -50,7 +50,7 @@ const Story: React.FC = () => {
   const [showComments, setShowComments] = useState(true)
   const [commentsLoading, setCommentsLoading] = useState(false)
   
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002'
+  const API_URL = import.meta.env.VITE_API_URL || window.location.origin
  // 获取故事数据
   useEffect(() => {
     if (id) {

@@ -26,7 +26,7 @@ interface AuthState {
   setLoading: (loading: boolean) => void
 }
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002'
+const API_URL = import.meta.env.VITE_API_URL || window.location.origin
 
 export const useAuthStore = create<AuthState>()(persist(
   (set, get) => ({
